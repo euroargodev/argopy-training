@@ -1,2 +1,2 @@
-# argopy_training
-Argopy training related content
+# Argopy training
+Argopy training related content.
