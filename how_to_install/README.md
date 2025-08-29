@@ -10,6 +10,9 @@ conda create -n argopytraining python=3.11
 conda activate argopytraining
 pip install argopy
 conda install cartopy
+# if you want to add this env to jupyter-lab
+pip install ipykernel
+python -m ipykernel install --name argopytraining --user
 ```
   
 You can also use the **yml** file included to build your environment.
