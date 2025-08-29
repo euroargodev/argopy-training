@@ -2,7 +2,7 @@ This training is not meant to be an installation tutorial. We expect from you to
   
 but
   
-Here's a minimal set of command to install a fresh argopy python environment for this training.  
+Here's a minimal set of commands to install a fresh argopy python environment for this training.  
 Assuming you have an environment manager like miniconda or conda.  
 
 ```
