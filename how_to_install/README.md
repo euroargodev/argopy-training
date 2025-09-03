@@ -6,13 +6,13 @@ Here's a minimal set of commands to install a fresh argopy python environment fo
 Assuming you have an environment manager like miniconda or conda.  
 
 ```
-conda create -n argopytraining python=3.11
-conda activate argopytraining
+conda create -n argopy-training python=3.11
+conda activate argopy-training
 conda install -c conda-forge argopy
 conda install -c conda-forge cartopy
 # if you want to add this env to jupyter-lab
 conda install -c conda-forge ipykernel
-python -m ipykernel install --name argopytraining --user
+python -m ipykernel install --name argopy-training --user
 ```
   
 You can also use the **yml** file included to build your environment : 
