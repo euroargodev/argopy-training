@@ -18,17 +18,19 @@
 
 # Material for Argopy training camps
 
-This repository is dedicated to the set-up and material required to follow Argopy training sessions.
+This repository is dedicated to host the material required for Argopy training sessions.
 
 ## Install and setup
 
-You will need to set up your Python environment with the last Argopy version and all required depedencies.
+**You will need to set up your Python environment with the last Argopy version and all required dependencies.**
 
-Since all the training material is provided as Jupyter notebooks, you will also need to set up Jupyter and install the Python kernel where you installed Argopy.
+> Note that Argopy training camps do not start with an installation tutorial. We expect from attendees a working Argopy environment to start the training.
 
-All install and setup instructions are given in the "[how_to_install](./how_to_install)" folder of this repository.
+Since all the training material is provided as [Jupyter notebooks](https://jupyter.org/install), you will also need to set up **Jupyter** (we recommend JupyterLab) and install the Python kernel where you installed Argopy.
 
-## Content
+To get you started though, succinct install and setup instructions are given in the "[how_to_install](./how_to_install)" folder of this repository.
+
+## Training Content
 
 A typical Argopy training camp is organized in 2 sessions.
 
@@ -38,27 +40,27 @@ To start with, check this PDF with a general introduction to the Argopy library.
 
 Then move on to execute the following hands-on notebook:
 
-| Theme       | Notebook                        | 
-|-------------|---------------------------------|
-| 🚀 Hands on | Select and fetch Argo-core data |
+| Theme                             | Notebook                                             | 
+|-----------------------------------|------------------------------------------------------|
+| 🚀 [Hands on](notebooks/hands-on) | Select and fetch Argo-core data |
 
 ### Session 2: Practice with thematic notebooks
 
 Select the thematic you are the most interested and raise your expertise with each notebook.
 
-| Theme                      | Notebooks                               |
-|----------------------------|-----------------------------------------|
-| 📊 Fetching Argo data        | Select and fetch data                   |
-|                            | Source and user mode                    |
-|                            | BGC data specifics                      |
-|                            | Direct access to one float dataset      |
-|                            | How to handle large data selection      |
-| 🛠️ Argo data manipulation | Filtering (QC flags, data mode)         |
-|                            | Vertical interpolation & binning        |
-|                            | Compute (TEOS, Optic, CANYON-MED)       |
-|                            | Compute your own per-profile diagnostic |
-| 🗃️ Argo index and meta-data | Explore Argo index files                |
-|                            | Argo Reference tables lookup            |
+| Theme                                                            | Notebooks                               |
+|------------------------------------------------------------------|-----------------------------------------|
+| 📊 [Argo data fetching](./notebooks/argo-data-fetching)          | Select and fetch data                   |
+|                                                                  | Source and user mode                    |
+|                                                                  | BGC data specifics                      |
+|                                                                  | Direct access to one float dataset      |
+|                                                                  | How to handle large data selection      |
+| 🛠️ [Argo data manipulation](./notebooks/argo-data-manipulation) | Filtering (QC flags, data mode)         |
+|                                                                  | Vertical interpolation & binning        |
+|                                                                  | Compute (TEOS, Optic, CANYON-MED)       |
+|                                                                  | Compute your own per-profile diagnostic |
+| 🗃️ [Argo index and meta-data](./notebooks/argo-index-meta-data) | Explore Argo index files                |
+|                                                                  | Argo Reference tables lookup            |
 
 
 
