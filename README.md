@@ -16,7 +16,7 @@
 [ossf-badge]: https://www.bestpractices.dev/projects/5939/badge
 [ossf-link]: https://www.bestpractices.dev/projects/5939
 
-# Training material for Argopy 
+# Material for Argopy training camps
 
 This repository is dedicated to the set-up and material required to follow Argopy training sessions.
 
