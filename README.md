@@ -34,31 +34,31 @@ A typical Argopy training camp is organized in 2 sessions.
 
 ### Session 1: General introduction to Argopy
 
-👉 To start with, check this PDF with a general introduction to the Argopy library.
+To start with, check this PDF with a general introduction to the Argopy library.
 
-👉 Then move on to execute the following hands-on notebook:
+Then move on to execute the following hands-on notebook:
 
-| Theme    | Notebook                        | 
-|----------|---------------------------------|
-| Hands on | Select and fetch Argo-core data |
+| Theme       | Notebook                        | 
+|-------------|---------------------------------|
+| 🚀 Hands on | Select and fetch Argo-core data |
 
 ### Session 2: Practice with thematic notebooks
 
-👉 Select the thematic you are the most interested and raise your expertise with each notebook.
+Select the thematic you are the most interested and raise your expertise with each notebook.
 
-| Theme                    | Notebooks                               |
-|--------------------------|-----------------------------------------|
-| Fetching Argo data       | Select and fetch data                   |
-|                          | Source and user mode                    |
-|                          | BGC data specifics                      |
-|                          | Direct access to one float dataset      |
-|                          | How to handle large data selection      |
-| Argo data manipulation   | Filtering (QC flags, data mode)         |
-|                          | Vertical interpolation & binning        |
-|                          | Compute (TEOS, Optic, CANYON-MED)       |
-|                          | Compute your own per-profile diagnostic |
-| Argo index and meta-data | Explore Argo index files                |
-|                          | Argo Reference tables lookup            |
+| Theme                      | Notebooks                               |
+|----------------------------|-----------------------------------------|
+| 📊 Fetching Argo data        | Select and fetch data                   |
+|                            | Source and user mode                    |
+|                            | BGC data specifics                      |
+|                            | Direct access to one float dataset      |
+|                            | How to handle large data selection      |
+| 🛠️ Argo data manipulation | Filtering (QC flags, data mode)         |
+|                            | Vertical interpolation & binning        |
+|                            | Compute (TEOS, Optic, CANYON-MED)       |
+|                            | Compute your own per-profile diagnostic |
+| 🗃️ Argo index and meta-data | Explore Argo index files                |
+|                            | Argo Reference tables lookup            |
 
 
 
