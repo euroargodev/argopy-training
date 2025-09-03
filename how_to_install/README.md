@@ -1,11 +1,16 @@
 <img src="https://raw.githubusercontent.com/euroargodev/argopy/master/docs/_static/argopy_logo_long.png" alt="argopy logo" width="200"/>
 
-# Training camp setup instructions
+# Training camp installation and setup instructions
 
-> Note that training camps do not include an installation session. 
+> Note that training camps do not include an installation and setup session. 
 
-We expect from participants to have a working argopy environment, running the latest version of argopy, i.e. **1.3.0**, as of September 2025 and to download or clone this repository content.
-  
+List of requirements from participants:
+- [ ] have a working argopy environment, running the latest version of argopy, i.e. **1.3.0**, as of September 2025
+- [ ] have Jupyterlab or Jupyter installed, since training is with notebooks.
+- [ ] download or clone this repository content in order to have training notebooks available to Jupyter for execution. 
+
+<!-- TOC --><a name="training-camp-setup-instructions"></a>
+ 
 ## Install a Python environment
 
 Below are two succinct methods to install a Python environment with all the necessary libraries to execute argopy training notebooks.
@@ -66,3 +71,18 @@ cd argopy-training/notebooks
 conda activate argopy-training
 jupyter lab
 ```
+
+You should now be ready to go !
+
+<!-- TOC start -->
+
+- [Training camp setup instructions](#training-camp-setup-instructions)
+   * [Install a Python environment](#install-a-python-environment)
+      + [Method 1](#method-1)
+      + [Method 2 (recommended)](#method-2-recommended)
+   * [Download training material ](#download-training-material)
+      + [Method 1 (repository cloning)](#method-1-repository-cloning)
+      + [Method 2 (repository archive download)](#method-2-repository-archive-download)
+   * [Execute training notebooks](#execute-training-notebooks)
+
+<!-- TOC end -->
