@@ -8,10 +8,10 @@ Assuming you have an environment manager like miniconda or conda.
 ```
 conda create -n argopytraining python=3.11
 conda activate argopytraining
-pip install argopy
-conda install cartopy
+conda install -c conda-forge argopy
+conda install -c conda-forge cartopy
 # if you want to add this env to jupyter-lab
-pip install ipykernel
+conda install -c conda-forge ipykernel
 python -m ipykernel install --name argopytraining --user
 ```
   
