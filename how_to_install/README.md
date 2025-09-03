@@ -15,4 +15,7 @@ conda install -c conda-forge ipykernel
 python -m ipykernel install --name argopytraining --user
 ```
   
-You can also use the **yml** file included to build your environment.
+You can also use the **yml** file included to build your environment : 
+```
+conda env create -f argopy-training.yml
+```

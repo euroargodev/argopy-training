@@ -1,4 +1,4 @@
-name: argopy-tests
+name: argopy-training
 channels:
   - conda-forge
 dependencies:
