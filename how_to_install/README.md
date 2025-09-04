@@ -33,7 +33,7 @@ Assuming you have an environment manager like miniconda or conda.
 ```bash
 conda create -n argopy-training python=3.11
 conda activate argopy-training
-mamba install -c conda-forge argopy gsw tqdm boto3 kerchunk numcodecs s3fs zarr dask distributed pyarrow ipython cartopy jupyterlab ipykernel ipywidgets matplotlib pyproj seaborn
+mamba install -c conda-forge argopy gsw tqdm boto3 kerchunk numcodecs s3fs zarr dask distributed pyarrow ipython cartopy jupyterlab jupyterlab-git ipykernel ipywidgets matplotlib pyproj seaborn
 ```
 then to add this environment to Jupyter:
 ```bash
