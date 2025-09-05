@@ -3,6 +3,7 @@ channels:
   - conda-forge
 dependencies:
   - python = 3.11
+  - argopy = 1.3.0
 
 # CORE:
   - aiohttp = 3.12.14
@@ -36,15 +37,15 @@ dependencies:
 # EXT.PLOT:
   - IPython = 9.4.0
   - cartopy = 0.24.0
-  - ipykernel = 6.29.5
-  - ipywidgets = 8.1.7
   - matplotlib = 3.10.3
   - pyproj = 3.7.1
   - seaborn = 0.13.2
 
 # JUPYTER FOR TRAINING CAMPS:
-  - jupyterlab
-  - jupyterlab-git
+  - jupyterlab = 4.4.7
+  - ipykernel = 6.29.5
+  - ipywidgets = 8.1.7
+  - jupyterlab-git = 0.51.2
 
 # DEV:
   - aiofiles = 24.1.0
