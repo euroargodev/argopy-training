@@ -5,24 +5,25 @@
 > Note that training camps do not include an installation and setup session. 
 
 List of requirements from participants:
-- [ ] have a working argopy environment, running the latest version of argopy, i.e. **1.3.0**, as of September 2025
-- [ ] have Jupyterlab or Jupyter installed, since training is with notebooks.
-- [ ] download or clone this repository content in order to have training notebooks available to Jupyter for execution. 
+- [ ] have a working argopy environment, [running the latest version of argopy](https://argopy.readthedocs.io/en/v1.3.0/install.html), i.e. **1.3.0**, as of September 2025
+- [ ] have [Jupyterlab or Jupyter](https://jupyter.org/install) installed, since training is with notebooks.
+- [ ] [download](https://docs.github.com/en/repositories/working-with-files/using-files/downloading-source-code-archives#downloading-source-code-archives) or [clone](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository#cloning-a-repository) this repository content in order to have training notebooks available to Jupyter for execution. 
 
 <!-- TOC start -->
 
 - [Training camp setup instructions](#training-camp-setup-instructions)
-   * [Install a Python environment](#install-a-python-environment)
+   * [1. Install a Python environment](#install-a-python-environment)
       + [Method 1](#method-1)
       + [Method 2 (recommended)](#method-2-recommended)
-   * [Download training material ](#download-training-material)
+   * [2. Download training material ](#download-training-material)
       + [Method 1 (repository cloning)](#method-1-repository-cloning)
       + [Method 2 (repository archive download)](#method-2-repository-archive-download)
-   * [Execute training notebooks](#execute-training-notebooks)
+   * [3. Test your installation](#3-test-your-installation)
+   * [4. Execute training notebooks](#execute-training-notebooks)
 
 <!-- TOC end --> 
 
-## Install a Python environment
+## 1. Install a Python environment
 
 Below are two succinct methods to install a Python environment with all the necessary libraries to execute argopy training notebooks.
   
@@ -52,29 +53,44 @@ then to add this environment to Jupyter:
 python -m ipykernel install --name argopy-training --user
 ```
   
-## Download training material 
+## 2. Download training material 
 
 Once you have installed a fully functional Python environment, you need to download the training camp material from this repository. Again 2 methods are possible.
 
 ### Method 1 (repository cloning)
 
-Navigate to an appropriate folder and clone the repository with git from the command line:
+All cloning details are available on this [Github help page](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository#cloning-a-repository).
+
+In a nutshell and from the command line, navigate to an appropriate folder and clone the repository with git:
 ```
 git clone https://github.com/euroargodev/argopy-training.git
 ```
-This will create an `argopy-training` folder where all the repository content will be cloned.
+This will create an `argopy-training` folder where all the repository content will be cloned (and possibly synchronized on-demand).
 
 ### Method 2 (repository archive download)
 
-By clicking to the link below:
+If you are not familiar with git, you can also simply download an archive of the repository by clicking to the link below:
 
 https://github.com/euroargodev/argopy-training/archive/refs/heads/main.zip
 
-your browser should download to your computer a zip archive of the repository content.
+Your browser should download to your computer a zip archive of the repository content.
 
 Simply un-archive the zip file to an appropriate folder.
 
-## Execute training notebooks
+All [Github download details can be found on this help page](https://docs.github.com/en/repositories/working-with-files/using-files/downloading-source-code-archives#downloading-source-code-archives).
+
+## 3. Test your installation
+
+In order to test if your installation is correct, the following argopy set of commands should work and return True
+
+```python
+import argopy
+[argopy.DataFetcher().float(1901393).data.argo.N_POINTS == 25527 and
+ argopy.DataFetcher(src='gdac', mode='expert').profile(5903248, 34).data.argo.N_POINTS == 70 and
+ argopy.DataFetcher(src='argovis').region([-20, -16., 0, 10, 0, 100.]).data.argo.N_LEVELS == 128]
+```
+
+## 4. Execute training notebooks
 
 Once you have your Python environment setup and the training material available, navigate from the command line to the `argopy-training/notebooks` folder and execute Jupyterlab or Jupyter:
 ```bash
