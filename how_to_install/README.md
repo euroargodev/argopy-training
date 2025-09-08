@@ -4,23 +4,23 @@
 
 > Note that training camps do not include an installation and setup session. 
 
-List of requirements from participants:
+**List of requirements for participants**:
 - [ ] have a working argopy environment, [running the latest version of argopy](https://argopy.readthedocs.io/en/v1.3.0/install.html), i.e. **1.3.0**, as of September 2025
 - [ ] have [Jupyterlab or Jupyter](https://jupyter.org/install) installed, since training is with notebooks.
 - [ ] [download](https://docs.github.com/en/repositories/working-with-files/using-files/downloading-source-code-archives#downloading-source-code-archives) or [clone](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository#cloning-a-repository) this repository content in order to have training notebooks available to Jupyter for execution. 
 
+***
+
+More detailed instructions below:
 <!-- TOC start -->
-
-- [Training camp setup instructions](#training-camp-setup-instructions)
-   * [1. Install a Python environment](#install-a-python-environment)
-      + [Method 1](#method-1)
-      + [Method 2 (recommended)](#method-2-recommended)
-   * [2. Download training material ](#download-training-material)
-      + [Method 1 (repository cloning)](#method-1-repository-cloning)
-      + [Method 2 (repository archive download)](#method-2-repository-archive-download)
-   * [3. Test your installation](#3-test-your-installation)
-   * [4. Execute training notebooks](#execute-training-notebooks)
-
+* [1. Install a Python environment](#1-install-a-python-environment)
+   + [Method 1](#method-1-recommended-tested-versions)
+   + [Method 2 (recommended)](#method-2-free-versions)
+* [2. Download training material ](#2-download-training-material)
+   + [Method 1 (repository cloning)](#method-1-recommended-repository-cloning)
+   + [Method 2 (repository archive download)](#method-2-repository-archive-download)
+* [3. Test your installation](#3-test-your-installation)
+* [4. Execute training notebooks](#4-execute-training-notebooks)
 <!-- TOC end --> 
 
 ## 1. Install a Python environment
