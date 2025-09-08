@@ -1,0 +1,117 @@
+name: Check install procedure
+
+on:
+  push:
+    branches:
+      - master
+  schedule:
+    - cron: "0 0 * * *" # Daily “At 00:00” UTC
+  workflow_dispatch: # allows you to trigger the workflow run manually
+  pull_request:
+    branches-ignore:
+      - 'dependabot*'
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+permissions:
+  id-token: write
+  contents: read
+
+jobs:
+
+  Check-Pinned:
+
+    name: Py311 - ${{ matrix.os }}
+    runs-on: ${{ matrix.os }}
+    defaults:
+      run:
+        shell: bash -l {0}
+    continue-on-error: True
+    strategy:
+      max-parallel: 12
+      fail-fast: false
+      matrix:
+        python-version: ["3.11", "3.12"]
+        os: ["ubuntu-latest", "windows-latest", "macos-latest"]
+
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: Set environment variables
+        run: |
+          echo "CONDA_ENV_FILE=how_to_install/argopy-training.yml" >> $GITHUB_ENV
+          echo "PYTHON_VERSION=${{ matrix.python-version }}" >> $GITHUB_ENV
+          echo "LOG_FILE=Pinned-Py${{matrix.python-version}}-${{matrix.os}}.log" >> $GITHUB_ENV
+
+      - name: Create environment with Micromamba ${{ matrix.python-version }}
+        uses: mamba-org/setup-micromamba@v2
+        with:
+          micromamba-version: '2.0.5-0'
+          environment-name: argopy-training
+          environment-file: ${{ env.CONDA_ENV_FILE }}
+          init-shell: bash
+          cache-environment: false
+          create-args: >-
+            python=${{matrix.python-version}}
+
+      - name: Version info
+        run: |
+          micromamba info
+          micromamba list
+
+      - name: Test install
+        run: |
+          python -c "import argopy; print(argopy.show_versions())"
+          python -c "import argopy; assert argopy.DataFetcher().float(1901393).data.argo.N_POINTS == 25527"
+          python -c "import argopy; assert argopy.DataFetcher(src='gdac', mode='expert').profile(5903248, 34).data.argo.N_POINTS == 70"
+          python -c "import argopy; assert argopy.DataFetcher(src='argovis').region([-20, -16., 0, 10, 0, 100.]).data.argo.N_LEVELS == 128"
+
+  Check-Free:
+
+    name: Py311 - ${{ matrix.os }}
+    runs-on: ${{ matrix.os }}
+    defaults:
+      run:
+        shell: bash -l {0}
+    continue-on-error: True
+    strategy:
+      max-parallel: 12
+      fail-fast: false
+      matrix:
+        python-version: ["3.11", "3.12"]
+        os: ["ubuntu-latest", "windows-latest", "macos-latest"]
+
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: Set environment variables
+        run: |
+          echo "PYTHON_VERSION=${{ matrix.python-version }}" >> $GITHUB_ENV
+          echo "LOG_FILE=Free-Py${{matrix.python-version}}-${{matrix.os}}.log" >> $GITHUB_ENV
+
+      - name: Create environment with Micromamba ${{ matrix.python-version }}
+        uses: mamba-org/setup-micromamba@v2
+        with:
+          micromamba-version: '2.0.5-0'
+          environment-name: argopy-training
+          init-shell: bash
+          cache-environment: false
+          condarc: | 
+            channels:
+              - conda-forge
+          create-args: >-
+            python=${{matrix.python-version}}
+            argopy gsw tqdm boto3 kerchunk numcodecs s3fs zarr dask distributed pyarrow ipython cartopy jupyterlab jupyterlab-git ipykernel ipywidgets matplotlib pyproj seaborn
+
+      - name: Version info
+        run: |
+          micromamba info
+          micromamba list
+
+      - name: Test install
+        run: |
+          python -c "import argopy; print(argopy.show_versions())"
+          python -c "import argopy; assert argopy.DataFetcher().float(1901393).data.argo.N_POINTS == 25527"
+          python -c "import argopy; assert argopy.DataFetcher(src='gdac', mode='expert').profile(5903248, 34).data.argo.N_POINTS == 70"
+          python -c "import argopy; assert argopy.DataFetcher(src='argovis').region([-20, -16., 0, 10, 0, 100.]).data.argo.N_LEVELS == 128"
