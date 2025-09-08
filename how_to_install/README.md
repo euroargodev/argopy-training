@@ -26,29 +26,33 @@ List of requirements from participants:
 ## 1. Install a Python environment
 
 Below are two succinct methods to install a Python environment with all the necessary libraries to execute argopy training notebooks.
-  
-### Method 1
-Here's a minimal set of commands to install a fresh argopy python environment for this training.  
-Assuming you have an environment manager like miniconda or conda.
 
-```bash
-conda create -n argopy-training python=3.11
-conda activate argopy-training
-mamba install -c conda-forge argopy gsw tqdm boto3 kerchunk numcodecs s3fs zarr dask distributed pyarrow ipython cartopy jupyterlab jupyterlab-git ipykernel ipywidgets matplotlib pyproj seaborn
-```
-then to add this environment to Jupyter:
-```bash
-python -m ipykernel install --name argopy-training --user
-```
+### Method 1 (recommended, tested versions)
+[![Install Method 1](https://github.com/euroargodev/argopy-training/actions/workflows/check_install.yml/badge.svg?branch=main)](https://github.com/euroargodev/argopy-training/actions/workflows/check_install.yml)
 
-### Method 2 (recommended)
-You can also use the **yml** file included in this repository to build a fully functional and complete environment with argopy, using library versions argopy has been tested with: 
+Assuming you have an environment manager like miniconda, conda or mamba, use the **yml** file included in this repository to build a fully functional and complete environment with argopy, using library versions argopy has been tested with: 
 ```
 conda env create -f https://raw.githubusercontent.com/euroargodev/argopy-training/refs/heads/main/how_to_install/argopy-training.yml
 ```
 This command will create and install a complete `argopy-training` environment.
 
-then to add this environment to Jupyter:
+Don't forget to add this environment kernel to Jupyter:
+```bash
+python -m ipykernel install --name argopy-training --user
+```
+
+### Method 2 (free versions)
+[![Install Method 2](https://github.com/euroargodev/argopy-training/actions/workflows/check_install_upstream.yml/badge.svg)](https://github.com/euroargodev/argopy-training/actions/workflows/check_install_upstream.yml)
+
+Assuming you have an environment manager like miniconda or conda, here's a minimal set of commands to install a fresh argopy python environment for this training:
+```bash
+conda create -n argopy-training python=3.11
+conda activate argopy-training
+mamba install -c conda-forge argopy gsw tqdm boto3 kerchunk numcodecs s3fs zarr dask distributed pyarrow ipython cartopy jupyterlab jupyterlab-git ipykernel ipywidgets matplotlib pyproj seaborn
+```
+This command will create and install a complete `argopy-training` environment with the last available version of all dependencies.
+
+Don't forget to add this environment kernel to Jupyter:
 ```bash
 python -m ipykernel install --name argopy-training --user
 ```
@@ -57,7 +61,7 @@ python -m ipykernel install --name argopy-training --user
 
 Once you have installed a fully functional Python environment, you need to download the training camp material from this repository. Again 2 methods are possible.
 
-### Method 1 (repository cloning)
+### Method 1 (recommended, repository cloning)
 
 All cloning details are available on this [Github help page](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository#cloning-a-repository).
 
