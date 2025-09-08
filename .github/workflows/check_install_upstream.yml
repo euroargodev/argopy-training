@@ -1,4 +1,4 @@
-name: Check install procedure with pinned librairies
+name: Check install procedure with unpinned librairies
 
 on:
   push:
@@ -40,20 +40,22 @@ jobs:
 
       - name: Set environment variables
         run: |
-          echo "CONDA_ENV_FILE=how_to_install/argopy-training.yml" >> $GITHUB_ENV
           echo "PYTHON_VERSION=${{ matrix.python-version }}" >> $GITHUB_ENV
-          echo "LOG_FILE=Pinned-Py${{matrix.python-version}}-${{matrix.os}}.log" >> $GITHUB_ENV
+          echo "LOG_FILE=Free-Py${{matrix.python-version}}-${{matrix.os}}.log" >> $GITHUB_ENV
 
       - name: Create environment with Micromamba ${{ matrix.python-version }}
         uses: mamba-org/setup-micromamba@v2
         with:
           micromamba-version: '2.0.5-0'
           environment-name: argopy-training
-          environment-file: ${{ env.CONDA_ENV_FILE }}
           init-shell: bash
           cache-environment: false
+          condarc: | 
+            channels:
+              - conda-forge
           create-args: >-
             python=${{matrix.python-version}}
+            argopy gsw tqdm boto3 kerchunk numcodecs s3fs zarr dask distributed pyarrow ipython cartopy jupyterlab jupyterlab-git ipykernel ipywidgets matplotlib pyproj seaborn
 
       - name: Version info
         run: |
