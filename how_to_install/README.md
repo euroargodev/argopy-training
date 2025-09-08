@@ -7,7 +7,7 @@
 **List of requirements for participants**:
 - [ ] have a working argopy environment, [running the latest version of argopy](https://argopy.readthedocs.io/en/v1.3.0/install.html), i.e. **1.3.0**, as of September 2025
 - [ ] have [Jupyterlab or Jupyter](https://jupyter.org/install) installed, since training is with notebooks.
-- [ ] [download](https://docs.github.com/en/repositories/working-with-files/using-files/downloading-source-code-archives#downloading-source-code-archives) or [clone](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository#cloning-a-repository) this repository content in order to have training notebooks available to Jupyter for execution. 
+- [ ] [clone](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository#cloning-a-repository) or [download](https://docs.github.com/en/repositories/working-with-files/using-files/downloading-source-code-archives#downloading-source-code-archives) this repository content in order to have training notebooks available to Jupyter for execution. 
 
 ***
 
