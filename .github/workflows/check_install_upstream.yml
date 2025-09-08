@@ -1,11 +1,11 @@
-name: Check install procedure with unpinned librairies
+name: Install free
 
 on:
   push:
     branches:
       - master
   schedule:
-    - cron: "0 0 * * *" # Daily “At 00:00” UTC
+    - cron: "0 30 * * *" # Daily “At 00:00” UTC
   workflow_dispatch: # allows you to trigger the workflow run manually
   pull_request:
     branches-ignore:
@@ -22,7 +22,7 @@ jobs:
 
   Check:
 
-    name: Py311 - ${{ matrix.os }}
+    name: Py${{ matrix.python-version }} - ${{ matrix.os }}
     runs-on: ${{ matrix.os }}
     defaults:
       run:

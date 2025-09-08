@@ -1,11 +1,11 @@
-name: Check install procedure with pinned librairies
+name: Install pinned
 
 on:
   push:
     branches:
       - master
   schedule:
-    - cron: "0 0 * * *" # Daily “At 00:00” UTC
+    - cron: "0 30 * * *" # Daily “At 00:30” UTC
   workflow_dispatch: # allows you to trigger the workflow run manually
   pull_request:
     branches-ignore:
@@ -22,12 +22,12 @@ jobs:
 
   Check:
 
-    name: Py311 - ${{ matrix.os }}
+    name: Py${{ matrix.python-version }} - ${{ matrix.os }}
     runs-on: ${{ matrix.os }}
     defaults:
       run:
         shell: bash -l {0}
-    continue-on-error: True
+    continue-on-error: False
     strategy:
       max-parallel: 12
       fail-fast: false
