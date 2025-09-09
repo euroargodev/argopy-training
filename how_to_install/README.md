@@ -14,11 +14,11 @@
 More detailed instructions below:
 <!-- TOC start -->
 * [1. Install a Python environment](#1-install-a-python-environment)
-   + [Method 1](#method-1-recommended-tested-versions)
-   + [Method 2 (recommended)](#method-2-free-versions)
+   + [Method 1 (recommended)](#method-1-recommended-tested-versions)
+   + [Method 2](#method-2-free-versions)
 * [2. Download training material ](#2-download-training-material)
-   + [Method 1 (repository cloning)](#method-1-recommended-repository-cloning)
-   + [Method 2 (repository archive download)](#method-2-repository-archive-download)
+   + [Method 1 (recommended)](#method-1-recommended-repository-cloning)
+   + [Method 2](#method-2-repository-archive-download)
 * [3. Test your installation](#3-test-your-installation)
 * [4. Execute training notebooks](#4-execute-training-notebooks)
 <!-- TOC end --> 
@@ -30,7 +30,7 @@ Below are two succinct methods to install a Python environment with all the nece
 ### Method 1 (recommended, tested versions)
 [![Install Method 1](https://github.com/euroargodev/argopy-training/actions/workflows/check_install.yml/badge.svg?branch=main)](https://github.com/euroargodev/argopy-training/actions/workflows/check_install.yml)
 
-Assuming you have an environment manager like miniconda, conda or mamba, use the **yml** file included in this repository to build a fully functional and complete environment with argopy, using library versions argopy has been tested with: 
+Assuming you have an environment manager like [conda](https://docs.conda.io/projects/conda/en/latest/user-guide/install/index.html#regular-installation) or [mamba](https://mamba.readthedocs.io/en/latest/installation/mamba-installation.html), or even [miniconda](https://www.anaconda.com/docs/getting-started/miniconda/install#quickstart-install-instructions) or [micromamba](https://mamba.readthedocs.io/en/latest/installation/micromamba-installation.html), use the **yml** file included in this repository to build a fully functional and complete environment with argopy, using library versions argopy has been tested with: 
 ```
 conda env create -f https://raw.githubusercontent.com/euroargodev/argopy-training/refs/heads/main/how_to_install/argopy-training.yml
 ```
@@ -44,7 +44,7 @@ python -m ipykernel install --name argopy-training --user
 ### Method 2 (free versions)
 [![Install Method 2](https://github.com/euroargodev/argopy-training/actions/workflows/check_install_upstream.yml/badge.svg)](https://github.com/euroargodev/argopy-training/actions/workflows/check_install_upstream.yml)
 
-Assuming you have an environment manager like miniconda or conda, here's a minimal set of commands to install a fresh argopy python environment for this training:
+Assuming you have an environment manager like [conda](https://docs.conda.io/projects/conda/en/latest/user-guide/install/index.html#regular-installation) or [mamba](https://mamba.readthedocs.io/en/latest/installation/mamba-installation.html), or even [miniconda](https://www.anaconda.com/docs/getting-started/miniconda/install#quickstart-install-instructions) or [micromamba](https://mamba.readthedocs.io/en/latest/installation/micromamba-installation.html), here's a minimal set of commands to install a fresh argopy python environment for this training:
 ```bash
 conda create -n argopy-training python=3.11
 conda activate argopy-training
@@ -61,6 +61,8 @@ python -m ipykernel install --name argopy-training --user
 
 Once you have installed a fully functional Python environment, you need to download the training camp material from this repository. Again 2 methods are possible.
 
+> Note that the Argopy team will probably upload and update training notebooks up to the very last minutes before the training session, so please perform this step as late as possible.
+
 ### Method 1 (recommended, repository cloning)
 
 All cloning details are available on this [Github help page](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository#cloning-a-repository).
@@ -70,6 +72,8 @@ In a nutshell and from the command line, navigate to an appropriate folder and c
 git clone https://github.com/euroargodev/argopy-training.git
 ```
 This will create an `argopy-training` folder where all the repository content will be cloned (and possibly synchronized on-demand).
+
+> A simple `git pull` will easily update your local copy with last minute changes on the remote repository.
 
 ### Method 2 (repository archive download)
 
