@@ -52,7 +52,7 @@ Select the thematic you are the most interested and raise your expertise with ea
 |------------------------------------------------------------------|-------------------------------------------------------------------------------------|
 | 📊 [Argo data fetching](./notebooks/argo-data-fetching)          | [Select and fetch data](./notebooks/argo-data-fetching/select-and-fetch-data.ipynb) |
 |                                                                  | [Source and user mode](./notebooks/argo-data-fetching/fetching-options.ipynb)       |
-|                                                                  | BGC data specifics                                                                  |
+|                                                                  | [BGC data specifics](./notebooks/argo-data-fetching/bgc-specifics.ipynb)            |
 |                                                                  | Direct access to one float dataset                                                  |
 |                                                                  | How to handle large data selection                                                  |
 | 🛠️ [Argo data manipulation](./notebooks/argo-data-manipulation) | Filtering (QC flags, data mode)                                                     |
