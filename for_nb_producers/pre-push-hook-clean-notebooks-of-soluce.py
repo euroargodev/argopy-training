@@ -1,6 +1,8 @@
 import json
 import os
-import glob
+import logging
+log = logging.getLogger("hook.nbsoluce")
+
 
 def clean_notebook(notebook_path):
     """Remove cells tagged with 'soluce' from a Jupyter notebook."""
@@ -37,6 +39,7 @@ def clean_all_notebooks(directory='.'):
             if file.endswith('_soluce.ipynb'):
                 notebook_path = os.path.join(root, file)
                 print(f"Cleaning {notebook_path}...")
+                log.info(f"Cleaning {notebook_path}...")
                 clean_notebook(notebook_path)
 
 if __name__ == '__main__':
