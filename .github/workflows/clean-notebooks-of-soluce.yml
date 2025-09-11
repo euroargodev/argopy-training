@@ -1,0 +1,76 @@
+name: Clean Jupyter Notebooks
+
+on:
+  workflow_dispatch: # allows you to trigger the workflow run manually
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  clean-notebooks:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install nbformat
+
+      - name: Clean notebooks
+        run: |
+          # Define the Python script to clean notebooks
+          python - <<EOF
+          import json
+          import os
+          from nbformat import read, write
+
+          def clean_notebook(notebook_path):
+              """Remove cells tagged with 'soluce' from a Jupyter notebook."""
+              with open(notebook_path, 'r', encoding='utf-8') as f:
+                  notebook = read(f, as_version=4)
+
+              # Filter out cells with the 'soluce' tag
+              notebook.cells = [
+                  cell for cell in notebook.cells
+                  if not cell.get('metadata', {}).get('tags', []).count('soluce')
+              ]
+
+              # Filter out cells starting with '##soluce'
+              firstcellcodeline = lambda c: c.get('source', [])[0] if len(c.get('source', []))>0 else ''
+              notebook['cells'] = [
+                  cell for cell in notebook['cells']
+                  if not (cell['cell_type'] == 'code' and '##soluce' in firstcellcodeline(cell))
+              ]
+          
+              # Save the cleaned notebook
+              with open(notebook_path.replace("_soluce.ipynb", ".ipynb"), 'w', encoding='utf-8') as f:
+                  json.dump(notebook, f, indent=1)
+
+          def clean_all_notebooks(directory='./notebooks'):
+              """Recursively clean all Jupyter notebooks in the specified directory and its subdirectories."""
+              for root, _, files in os.walk(directory):
+                  for file in files:
+                      if file.endswith('_soluce.ipynb'):
+                          notebook_path = os.path.join(root, file)
+                          print(f"Cleaning {notebook_path}...")
+                          clean_notebook(notebook_path)
+
+          clean_all_notebooks()
+          EOF
+
+      - name: Commit and push changes
+        run: |
+          git config --global user.name "GitHub Actions"
+          git config --global user.email "actions@github.com"
+          git add .
+          git diff-index --quiet HEAD || git commit -m "Cleaned Jupyter notebooks by removing 'soluce' code cells"
+          git push

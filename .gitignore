@@ -76,7 +76,6 @@ target/
 
 # Jupyter Notebook
 .ipynb_checkpoints
-*_soluce.ipynb
 cache
 #*.nc
 .idea
