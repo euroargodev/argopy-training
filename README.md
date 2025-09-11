@@ -48,16 +48,16 @@ Then move on to execute the following hands-on notebook:
 
 Select the thematic you are the most interested in, and raise your expertise by going through each notebook and exercice there-in.
 
-| Theme                                                            | Notebooks                                                                           |
-|------------------------------------------------------------------|-------------------------------------------------------------------------------------|
-| 📊 [Argo data fetching](./notebooks/argo-data-fetching)          | [Select and fetch data](./notebooks/argo-data-fetching/select-and-fetch-data.ipynb) |
-|                                                                  | [Source and user mode](./notebooks/argo-data-fetching/fetching-options.ipynb)       |
-|                                                                  | [BGC data specifics](./notebooks/argo-data-fetching/bgc-specifics.ipynb)            |
-|                                                                  | [Direct access to one float dataset](./notebooks/argo-data-fetching/direct-access-to-float-dataset.ipynb)          |
-|                                                                  | How to handle large data selection                                                  |
-| 🛠️ [Argo data manipulation](./notebooks/argo-data-manipulation) | Filtering (QC flags, data mode)                                                     |
-|                                                                  | Vertical interpolation & binning                                                    |
-|                                                                  | Compute (TEOS, Optic, CANYON-MED)                                                   |
-|                                                                  | Compute your own per-profile diagnostic                                             |
-| 🗃️ [Argo index and meta-data](./notebooks/argo-index-meta-data) | Explore Argo index files                                                            |
-|                                                                  | Argo Reference tables lookup                                                        |
+| Theme                                                            | Notebooks                                                                                                 |
+|------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------|
+| 📊 [Argo data fetching](./notebooks/argo-data-fetching)          | [Select and fetch data](./notebooks/argo-data-fetching/select-and-fetch-data.ipynb)                       |
+|                                                                  | [Source and user mode](./notebooks/argo-data-fetching/fetching-options.ipynb)                             |
+|                                                                  | [BGC data specifics](./notebooks/argo-data-fetching/bgc-specifics.ipynb)                                  |
+|                                                                  | [Direct access to one float dataset](./notebooks/argo-data-fetching/direct-access-to-float-dataset.ipynb) |
+|                                                                  | How to handle large data selection                                                                        |
+| 🛠️ [Argo data manipulation](./notebooks/argo-data-manipulation) | Filtering (QC flags, data mode)                                                                           |
+|                                                                  | Vertical interpolation & binning                                                                          |
+|                                                                  | [Compute (TEOS, Optic, CANYON-MED)](./notebooks/argo-data-manipulation/compute.ipynb)                     |
+|                                                                  | Compute your own per-profile diagnostic                                                                   |
+| 🗃️ [Argo index and meta-data](./notebooks/argo-index-meta-data) | Explore Argo index files                                                                                  |
+|                                                                  | Argo Reference tables lookup                                                                              |
