@@ -60,6 +60,16 @@ def fix_disclaimer(input_nb_path, output_nb_path):
     for cell in notebook["cells"]:
         if cell.get("metadata", {}).get("tags", []).count("disclaimer"):
             cell["source"] = [
+                "### \n",
+                "***\n",
+                "Useful argopy commands:\n",
+                "```python\n",
+                "argopy.show_versions()\n",
+                "argopy.reset_options()\n",
+                "argopy.show_options()\n",
+                "argopy.clear_cache()\n",
+                "argopy.status()\n",
+                "```\n",
                 "***\n",
                 "![logo](https://raw.githubusercontent.com/euroargodev/argopy-training/refs/heads/main/for_nb_producers/template_argopy_training_EAONE.png)"
             ]
