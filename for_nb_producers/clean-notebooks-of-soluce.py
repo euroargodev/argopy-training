@@ -43,7 +43,7 @@ def clean_notebook_soluce(input_nb_path, output_nb_path):
 
     # Save cleaned notebook
     p = output_nb_path.with_stem(
-        output_nb_path.stem.replace("_soluce", "")
+        output_nb_path.stem.replace("-soluce", "")
     ).with_suffix(".ipynb")
     with open(p, "w", encoding="utf-8") as f:
         json.dump(notebook, f, indent=1)
@@ -110,7 +110,7 @@ def clean_all_notebooks(folder_in=".", folder_out="."):
             # Construct the corresponding output path
             output_path = output_dir / relative_path
 
-            if "_soluce.ipynb" in notebook_path.name:
+            if "-soluce.ipynb" in notebook_path.name:
                 op = clean_notebook_soluce(notebook_path, output_path)
                 print(f"Cleaning {notebook_path} -> {op}")
             else:
