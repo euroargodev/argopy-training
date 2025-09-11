@@ -6,8 +6,11 @@ import logging
 
 log = logging.getLogger("hook.nbsoluce")
 
+firstcellcodeline = lambda c: (
+    c.get("source", [])[0] if len(c.get("source", [])) > 0 else ""
+)
 
-def clean_notebook(input_nb_path, output_nb_path):
+def clean_notebook_soluce(input_nb_path, output_nb_path):
     """Remove cells tagged with 'soluce' from a Jupyter notebook."""
     with open(input_nb_path, "r", encoding="utf-8") as f:
         notebook = json.load(f)
@@ -20,14 +23,20 @@ def clean_notebook(input_nb_path, output_nb_path):
     ]
 
     # Filter out cells starting with '##soluce'
-    firstcellcodeline = lambda c: (
-        c.get("source", [])[0] if len(c.get("source", [])) > 0 else ""
-    )
     notebook["cells"] = [
         cell
         for cell in notebook["cells"]
         if not (cell["cell_type"] == "code" and "##soluce" in firstcellcodeline(cell))
     ]
+
+    # We also remove all code cell output:
+    cells = []
+    for cell in notebook["cells"]:
+        if cell["cell_type"] == "code":
+            cell["outputs"] = []
+            cell['execution_count'] = None
+        cells.append(cell)
+    notebook["cells"] = cells
 
     # Ensure the output directory exists
     os.makedirs(os.path.dirname(output_nb_path), exist_ok=True)
@@ -41,11 +50,36 @@ def clean_notebook(input_nb_path, output_nb_path):
     return p
 
 
+def fix_disclaimer(input_nb_path, output_nb_path):
+    """Fill in disclaimer cell"""
+    with open(input_nb_path, "r", encoding="utf-8") as f:
+        notebook = json.load(f)
+
+    # Look for the disclaimer cell
+    cells = []
+    for cell in notebook["cells"]:
+        if cell.get("metadata", {}).get("tags", []).count("disclaimer"):
+            cell["source"] = [
+                "***\n",
+                "![logo](https://raw.githubusercontent.com/euroargodev/argopy-training/refs/heads/main/for_nb_producers/template_argopy_training_EAONE.png)"
+            ]
+        cells.append(cell)
+    notebook["cells"] = cells
+
+    # Ensure the output directory exists
+    os.makedirs(os.path.dirname(output_nb_path), exist_ok=True)
+
+    # Save cleaned notebook
+    with open(output_nb_path, "w", encoding="utf-8") as f:
+        json.dump(notebook, f, indent=1)
+    return output_nb_path
+
 def copy_notebook(input_nb_path, output_nb_path):
     """Copy a Jupyter notebook to a new location, possibly overwriting existing one."""
     if output_nb_path.is_file():
         output_nb_path.unlink()
     shutil.copy2(input_nb_path, output_nb_path)
+    return output_nb_path
 
 
 def clean_all_notebooks(folder_in=".", folder_out="."):
@@ -67,11 +101,14 @@ def clean_all_notebooks(folder_in=".", folder_out="."):
             output_path = output_dir / relative_path
 
             if "_soluce.ipynb" in notebook_path.name:
-                op = clean_notebook(notebook_path, output_path)
+                op = clean_notebook_soluce(notebook_path, output_path)
                 print(f"Cleaning {notebook_path} -> {op}")
             else:
-                print(f"Unchanged {notebook_path} -> {output_path}")
-                copy_notebook(notebook_path, output_path)
+                op = copy_notebook(notebook_path, output_path)
+                print(f"Unchanged {notebook_path} -> {op}")
+
+            fix_disclaimer(op, op)
+
 
         # else:
         #     print(f"Skipping {notebook_path}")
