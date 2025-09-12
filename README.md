@@ -56,7 +56,7 @@ Select the thematic you are the most interested in, and raise your expertise by 
 |                                                                  | [Direct access to one float dataset](./notebooks/argo-data-fetching/direct-access-to-float-dataset.ipynb) |
 |                                                                  | How to handle large data selection                                                                        |
 | 🛠️ [Argo data manipulation](./notebooks/argo-data-manipulation) | Filtering (QC flags, data mode)                                                                           |
-|                                                                  | Vertical interpolation & binning                                                                          |
+|                                                                  | [Vertical interpolation & binning](./notebooks/argo-data-manipulation/vertical-interpolation-and-binning.ipynb)|
 |                                                                  | [Compute (TEOS, Optic, CANYON-MED)](./notebooks/argo-data-manipulation/compute.ipynb)                     |
 |                                                                  | Compute your own per-profile diagnostic                                                                   |
 | 🗃️ [Argo index and meta-data](./notebooks/argo-index-meta-data) | Explore Argo index files                                                                                  |
