@@ -60,7 +60,7 @@ def fix_disclaimer(input_nb_path, output_nb_path):
     for cell in notebook["cells"]:
         if cell.get("metadata", {}).get("tags", []).count("disclaimer"):
             cell["source"] = [
-                "### \n",
+                "### 🏁 End of the notebook\n",
                 "***\n",
                 "Useful argopy commands:\n",
                 "```python\n",
