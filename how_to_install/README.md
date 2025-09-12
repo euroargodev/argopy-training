@@ -95,7 +95,8 @@ In order to test if your installation is correct, the following argopy set of co
 import argopy
 [argopy.DataFetcher().float(1901393).data.argo.N_POINTS == 25527 and
  argopy.DataFetcher(src='gdac', mode='expert').profile(5903248, 34).data.argo.N_POINTS == 70 and
- argopy.DataFetcher(src='argovis').region([-20, -16., 0, 10, 0, 100.]).data.argo.N_LEVELS == 128]
+ argopy.DataFetcher(src='argovis').region([-20, -16., 0, 10, 0, 100., '20250801','20250901']).data.argo.N_LEVELS == 172
+]
 ```
 
 ## 4. Execute training notebooks
