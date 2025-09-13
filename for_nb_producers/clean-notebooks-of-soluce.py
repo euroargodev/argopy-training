@@ -49,13 +49,12 @@ def clean_notebook_soluce(input_nb_path, output_nb_path):
         json.dump(notebook, f, indent=1)
     return p
 
-
 def fix_disclaimer(input_nb_path, output_nb_path):
     """Fill in disclaimer cell"""
     with open(input_nb_path, "r", encoding="utf-8") as f:
         notebook = json.load(f)
 
-    # Look for the disclaimer cell
+    # Look for the disclaimer cell and add content:
     cells = []
     for cell in notebook["cells"]:
         if cell.get("metadata", {}).get("tags", []).count("disclaimer"):
@@ -91,9 +90,56 @@ def copy_notebook(input_nb_path, output_nb_path):
     shutil.copy2(input_nb_path, output_nb_path)
     return output_nb_path
 
+def insert_toc(input_nb_path, output_nb_path):
+    with open(input_nb_path, "r", encoding="utf-8") as f:
+        notebook = json.load(f)
 
-def clean_all_notebooks(folder_in=".", folder_out="."):
-    """Recursively clean all Jupyter notebooks in the specified directory and its subdirectories."""
+    def generate_toc(notebook):
+        """Generate a Markdown TOC from notebook headings."""
+        toc_lines = ["\n**Table of Contents**\n"]
+        for cell in notebook['cells']:
+            if cell['cell_type'] == "markdown":
+                for line in cell['source']:
+                    if line.startswith("#"):
+                        # Extract heading level and text
+                        level = line.count("#")
+                        if level >= 3:
+                            text = line.lstrip("#").strip()
+                            indent = "  " * (level - 3)
+                            toc_lines.append(f"{indent}- [{text}](#{text.lower().replace(' ', '-')})\n")
+        return toc_lines
+
+    # Get notebook TOC:
+    toc = generate_toc(notebook)
+
+    # Look for a TOC cell and replace content:
+    cells = []
+    for cell in notebook["cells"]:
+        if cell.get("metadata", {}).get("tags", []).count("toc"):
+            cell["source"] = toc
+        cells.append(cell)
+
+    # Also look for the <!--TOC--> tag in cell, and replace it:
+    cells = []
+    for cell in notebook["cells"]:
+        if cell['cell_type'] == 'markdown':
+            # Find the index of the line containing '<!--TOC-->'
+            toc_index = next((i for i, item in enumerate(cell['source']) if '<!--TOC-->' in item), None)
+            if toc_index is not None:
+                # Replace the line with the TOC contents
+                cell['source'][toc_index:toc_index + 1] = toc
+        cells.append(cell)
+
+    # Ensure the output directory exists
+    os.makedirs(os.path.dirname(output_nb_path), exist_ok=True)
+
+    # Save cleaned notebook
+    with open(output_nb_path, "w", encoding="utf-8") as f:
+        json.dump(notebook, f, indent=1)
+    return output_nb_path
+
+def process_all_notebooks(folder_in=".", folder_out="."):
+    """Recursively process all Jupyter notebooks in the specified directory and its subdirectories."""
     input_dir = Path(folder_in)
     output_dir = Path(folder_out)
 
@@ -118,6 +164,7 @@ def clean_all_notebooks(folder_in=".", folder_out="."):
                 print(f"Unchanged {notebook_path} -> {op}")
 
             fix_disclaimer(op, op)
+            insert_toc(op, op)
 
 
         # else:
@@ -126,4 +173,4 @@ def clean_all_notebooks(folder_in=".", folder_out="."):
 if __name__ == "__main__":
     nbinput = "../notebooks-with-soluce"
     nboutput = "../notebooks"
-    clean_all_notebooks(nbinput, nboutput)
+    process_all_notebooks(nbinput, nboutput)
