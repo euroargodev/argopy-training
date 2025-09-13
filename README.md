@@ -59,5 +59,5 @@ Select the thematic you are the most interested in, and raise your expertise by 
 |                                                                  | [Vertical interpolation & binning](./notebooks/argo-data-manipulation/vertical-interpolation-and-binning.ipynb) |
 |                                                                  | [Compute (TEOS, Optic, CANYON-MED)](./notebooks/argo-data-manipulation/compute.ipynb)                           |
 |                                                                  | [Compute your own per-profile diagnostic](./notebooks/argo-data-manipulation/compute-custom.ipynb)              |
-| 🗃️ [Argo index and meta-data](./notebooks/argo-index-meta-data) | Explore Argo index files                                                                                        |
+| 🗃️ [Argo index and meta-data](./notebooks/argo-index-meta-data) | [Working with Argo index files](./notebooks/argo-index-meta-data/working-with-argo-index.ipynb)                 |
 |                                                                  | [Argo Reference tables lookup](./notebooks/argo-index-meta-data/argo-reference-tables.ipynb)                    |

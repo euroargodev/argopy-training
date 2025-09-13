@@ -13,16 +13,16 @@ Then move on to execute the following hands-on notebook:
 
 Select the thematic you are the most interested in, and raise your expertise by going through each notebook and exercice there-in.
 
-| Theme                                                            | Notebooks                                                                                                       |
-|------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------|
-| 📊 [Argo data fetching](./argo-data-fetching)          | [Select and fetch data](./argo-data-fetching/select-and-fetch-data.ipynb)                             |
-|                                                                  | [Source and user mode](./argo-data-fetching/fetching-options.ipynb)                                   |
-|                                                                  | [BGC data specifics](./argo-data-fetching/bgc-specifics.ipynb)                                        |
-|                                                                  | [Direct access to one float dataset](./argo-data-fetching/direct-access-to-float-dataset.ipynb)       |
-|                                                                  | How to handle large data selection                                                                              |
-| 🛠️ [Argo data manipulation](./argo-data-manipulation) | Filtering (QC flags, data mode)                                                                                 |
+| Theme                                                            | Notebooks                                                                                            |
+|------------------------------------------------------------------|------------------------------------------------------------------------------------------------------|
+| 📊 [Argo data fetching](./argo-data-fetching)          | [Select and fetch data](./argo-data-fetching/select-and-fetch-data.ipynb)                            |
+|                                                                  | [Source and user mode](./argo-data-fetching/fetching-options.ipynb)                                  |
+|                                                                  | [BGC data specifics](./argo-data-fetching/bgc-specifics.ipynb)                                       |
+|                                                                  | [Direct access to one float dataset](./argo-data-fetching/direct-access-to-float-dataset.ipynb)      |
+|                                                                  | How to handle large data selection                                                                   |
+| 🛠️ [Argo data manipulation](./argo-data-manipulation) | Filtering (QC flags, data mode)                                                                      |
 |                                                                  | [Vertical interpolation & binning](./argo-data-manipulation/vertical-interpolation-and-binning.ipynb) |
-|                                                                  | [Compute (TEOS, Optic, CANYON-MED)](./argo-data-manipulation/compute.ipynb)                           |
-|                                                                  | [Compute your own per-profile diagnostic](./argo-data-manipulation/compute-custom.ipynb)              |
-| 🗃️ [Argo index and meta-data](./argo-index-meta-data) | Explore Argo index files                                                                                        |
-|                                                                  | [Argo Reference tables lookup](./argo-index-meta-data/argo-reference-tables.ipynb)                    |
+|                                                                  | [Compute (TEOS, Optic, CANYON-MED)](./argo-data-manipulation/compute.ipynb)                          |
+|                                                                  | [Compute your own per-profile diagnostic](./argo-data-manipulation/compute-custom.ipynb)             |
+| 🗃️ [Argo index and meta-data](./argo-index-meta-data) | [Working with Argo index files](./argo-index-meta-data/working-with-argo-index.ipynb)                |
+|                                                                  | [Argo Reference tables lookup](./argo-index-meta-data/argo-reference-tables.ipynb)                   |
