@@ -58,6 +58,7 @@ def fix_disclaimer(input_nb_path, output_nb_path):
     cells = []
     for cell in notebook["cells"]:
         if cell.get("metadata", {}).get("tags", []).count("disclaimer"):
+            print("\tFound disclaimer to insert")
             cell["source"] = [
                 "### 🏁 End of the notebook\n",
                 "***\n",
@@ -100,12 +101,12 @@ def insert_toc(input_nb_path, output_nb_path):
         for cell in notebook['cells']:
             if cell['cell_type'] == "markdown":
                 for line in cell['source']:
-                    if line.startswith("#"):
+                    if line.startswith("#") and not line.startswith("## Notebook Title"):
                         # Extract heading level and text
                         level = line.count("#")
-                        if level >= 3:
+                        if level >= 2:
                             text = line.lstrip("#").strip()
-                            indent = "  " * (level - 3)
+                            indent = "  " * (level - 2)
                             toc_lines.append(f"{indent}- [{text}](#{text.lower().replace(' ', '-')})\n")
         return toc_lines
 
@@ -126,6 +127,7 @@ def insert_toc(input_nb_path, output_nb_path):
             # Find the index of the line containing '<!--TOC-->'
             toc_index = next((i for i, item in enumerate(cell['source']) if '<!--TOC-->' in item), None)
             if toc_index is not None:
+                print("\tFound TOC to insert")
                 # Replace the line with the TOC contents
                 cell['source'][toc_index:toc_index + 1] = toc
         cells.append(cell)
