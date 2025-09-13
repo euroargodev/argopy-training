@@ -60,4 +60,4 @@ Select the thematic you are the most interested in, and raise your expertise by 
 |                                                                  | [Compute (TEOS, Optic, CANYON-MED)](./notebooks/argo-data-manipulation/compute.ipynb)                           |
 |                                                                  | [Compute your own per-profile diagnostic](./notebooks/argo-data-manipulation/compute-custom.ipynb)              |
 | 🗃️ [Argo index and meta-data](./notebooks/argo-index-meta-data) | Explore Argo index files                                                                                        |
-|                                                                  | Argo Reference tables lookup                                                                                    |
+|                                                                  | [Argo Reference tables lookup](./notebooks/argo-index-meta-data/argo-reference-tables.ipynb)                    |
