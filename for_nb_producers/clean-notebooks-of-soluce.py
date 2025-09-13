@@ -61,8 +61,8 @@ def fix_disclaimer(input_nb_path, output_nb_path):
             print("\tFound disclaimer to insert")
             cell["source"] = [
                 "## 🏁 End of the notebook\n",
-                "***\n",
-                "Useful argopy commands:\n",
+                "\n***\n",
+                "#### 👀 Useful argopy commands\n",
                 "```python\n",
                 "argopy.reset_options()\n",
                 "argopy.show_options()\n",
@@ -70,8 +70,22 @@ def fix_disclaimer(input_nb_path, output_nb_path):
                 "argopy.clear_cache()\n",
                 "argopy.show_versions()\n",
                 "```\n",
-                "***\n",
-                "![logo](https://raw.githubusercontent.com/euroargodev/argopy-training/refs/heads/main/for_nb_producers/template_argopy_training_EAONE.png)"
+                "#### ⚖️ License Information\n",
+                "This Jupyter Notebook is licensed under the **European Union Public Licence (EUPL) v1.2**.\n",
+                "\n",
+                "| Permissions      | Limitations     | Conditions                     |\n",
+                "|------------------|-----------------|--------------------------------|\n",
+                "| ✔ Commercial use | ❌ Liability     | ⓘ License and copyright notice |\n",
+                "| ✔ Modification   | ❌ Trademark use | ⓘ Disclose source              |\n",
+                "| ✔ Distribution   | ❌ Warranty      | ⓘ State changes                |\n",
+                "| ✔ Patent use     |                  | ⓘ Network use is distribution  |\n",
+                "| ✔ Private use    |                  | ⓘ Same license                 |\n",
+                "\n",
+                "For more details, visit: [EUPL v1.2 Full Text](https://github.com/euroargodev/argopy-training/blob/main/LICENSE).\n",
+                "\n",
+                "#### 🤝 Sponsor\n",
+                "![logo](https://raw.githubusercontent.com/euroargodev/argopy-training/refs/heads/main/for_nb_producers/template_argopy_training_EAONE.png)",
+                "\n***\n",
             ]
         cells.append(cell)
     notebook["cells"] = cells
