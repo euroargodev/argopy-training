@@ -60,7 +60,7 @@ def fix_disclaimer(input_nb_path, output_nb_path):
         if cell.get("metadata", {}).get("tags", []).count("disclaimer"):
             print("\tFound disclaimer to insert")
             cell["source"] = [
-                "### 🏁 End of the notebook\n",
+                "## 🏁 End of the notebook\n",
                 "***\n",
                 "Useful argopy commands:\n",
                 "```python\n",
@@ -144,10 +144,6 @@ def process_all_notebooks(folder_in=".", folder_out="."):
     """Recursively process all Jupyter notebooks in the specified directory and its subdirectories."""
     input_dir = Path(folder_in)
     output_dir = Path(folder_out)
-
-    # Clear or create the output directory
-    # if output_dir.exists():
-    #     shutil.rmtree(output_dir)
     output_dir.mkdir(parents=True, exist_ok=True)
 
     for notebook_path in input_dir.rglob("*.ipynb"):
