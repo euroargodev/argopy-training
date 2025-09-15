@@ -87,6 +87,7 @@ def fix_disclaimer(input_nb_path, output_nb_path):
                 "![logo](https://raw.githubusercontent.com/euroargodev/argopy-training/refs/heads/main/for_nb_producers/template_argopy_training_EAONE.png)",
                 "\n***\n",
             ]
+            cell['metadata']['editable'] = False
         cells.append(cell)
     notebook["cells"] = cells
 
