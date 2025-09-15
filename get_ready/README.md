@@ -32,7 +32,7 @@ Below are two succinct methods to install a Python environment with all the nece
 
 Assuming you have an environment manager like [conda](https://docs.conda.io/projects/conda/en/latest/user-guide/install/index.html#regular-installation) or [mamba](https://mamba.readthedocs.io/en/latest/installation/mamba-installation.html), or even [miniconda](https://www.anaconda.com/docs/getting-started/miniconda/install#quickstart-install-instructions) or [micromamba](https://mamba.readthedocs.io/en/latest/installation/micromamba-installation.html), use the **yml** file included in this repository to build a fully functional and complete environment with argopy, using library versions argopy has been tested with: 
 ```
-conda env create -f https://raw.githubusercontent.com/euroargodev/argopy-training/refs/heads/main/how_to_install/argopy-training.yml
+conda env create -f https://raw.githubusercontent.com/euroargodev/argopy-training/refs/heads/main/get_ready/argopy-training.yml
 ```
 This command will create and install a complete `argopy-training` environment.
 
@@ -101,9 +101,9 @@ import argopy
 
 ## 4. Execute training notebooks
 
-Once you have your Python environment setup and the training material available, navigate from the command line to the `argopy-training/notebooks` folder and execute Jupyterlab or Jupyter:
+Once you have your Python environment setup and the training material available, navigate from the command line to the `argopy-training/content` folder and execute Jupyterlab or Jupyter:
 ```bash
-cd argopy-training/notebooks
+cd argopy-training/content
 conda activate argopy-training
 jupyter lab
 ```
