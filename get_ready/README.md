@@ -1,13 +1,22 @@
-<img src="https://raw.githubusercontent.com/euroargodev/argopy/master/docs/_static/argopy_logo_long.png" alt="argopy logo" width="200"/>
+<img src="https://raw.githubusercontent.com/euroargodev/argopy/master/docs/_static/argopy_logo_long_training.png" alt="argopy logo" width="200"/>
+
+[![DOI][joss-badge]][joss-link] [![Pypi][pip-badge]][pip-link] [![Conda][conda-badge]][conda-link]
+
+[joss-badge]: https://img.shields.io/badge/DOI-10.21105%2Fjoss.02425-brightgreen
+[joss-link]: https://dx.doi.org/10.21105/joss.02425
+[pip-badge]: https://img.shields.io/pypi/v/argopy
+[pip-link]: https://pypi.org/project/argopy/
+[conda-badge]: https://img.shields.io/conda/vn/conda-forge/argopy?logo=anaconda
+[conda-link]: https://anaconda.org/conda-forge/argopy
 
 # Training camp installation and setup instructions
 
 > Note that training camps do not include an installation and setup session. 
 
 **List of requirements for participants**:
-- [ ] have a working argopy environment, [running the latest version of argopy](https://argopy.readthedocs.io/en/v1.3.0/install.html), i.e. **1.3.0**, as of September 2025
-- [ ] have [Jupyterlab or Jupyter](https://jupyter.org/install) installed, since training is with notebooks.
-- [ ] [clone](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository#cloning-a-repository) or [download](https://docs.github.com/en/repositories/working-with-files/using-files/downloading-source-code-archives#downloading-source-code-archives) this repository content in order to have training notebooks available to Jupyter for execution. 
+- [ ] have a working argopy environment, [running version 1.3.0 of argopy](https://argopy.readthedocs.io/en/v1.3.0/install.html)
+- [ ] have [Jupyterlab or Jupyter](https://jupyter.org/install) installed, since training is with notebooks
+- [ ] [clone](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository#cloning-a-repository) or [download](https://docs.github.com/en/repositories/working-with-files/using-files/downloading-source-code-archives#downloading-source-code-archives) this repository content in order to have training notebooks available to Jupyter for execution.
 
 ***
 
