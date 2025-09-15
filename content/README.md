@@ -5,7 +5,7 @@
 [joss-badge]: https://img.shields.io/badge/DOI-10.21105%2Fjoss.02425-brightgreen
 [joss-link]: https://dx.doi.org/10.21105/joss.02425
 [rtd-badge]: https://img.shields.io/badge/Documentation-v1.3.0-brightgreen
-[rtd-link]: https://argopy.readthedocs.io/en/latest/?badge=latest
+[rtd-link]: https://argopy.readthedocs.io/en/v1.3.0
 
 ### Session 1: General introduction to Argopy
 
