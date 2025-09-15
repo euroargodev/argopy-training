@@ -1,17 +1,13 @@
 <img src="https://raw.githubusercontent.com/euroargodev/argopy/master/docs/_static/argopy_logo_long_training.png" alt="argopy logo" width="200"/>
 
-[![DOI][joss-badge]][joss-link] [![Documentation][rtd-badge]][rtd-link] [![Pypi][pip-badge]][pip-link] [![Conda][conda-badge]][conda-link]                  
+[![DOI][joss-badge]][joss-link] [![Documentation][rtd-badge]][rtd-link]
 
 [rtd-badge]: https://img.shields.io/badge/Documentation-v1.3.0-brightgreen
 [rtd-link]: https://argopy.readthedocs.io/en/v1.3.0
 [joss-badge]: https://img.shields.io/badge/DOI-10.21105%2Fjoss.02425-brightgreen
 [joss-link]: https://dx.doi.org/10.21105/joss.02425
-[pip-badge]: https://img.shields.io/pypi/v/argopy
-[pip-link]: https://pypi.org/project/argopy/
-[conda-badge]: https://img.shields.io/conda/vn/conda-forge/argopy?logo=anaconda
-[conda-link]: https://anaconda.org/conda-forge/argopy
 
-# 🎓 Material for Argopy training camps
+# 🎓 Repository for Argopy training camps
 
 This repository is dedicated to host the material required for Argopy training sessions.
 
@@ -25,7 +21,7 @@ Since all the training material is provided as [Jupyter notebooks](https://jupyt
 
 To get you started though, installation and setup instructions are given in the [get_ready](./get_ready) folder of this repository.
 
-## 📚 Training Content
+## 📚 Training content
 
 A typical Argopy training camp is organized in 2 sessions.
 
