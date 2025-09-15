@@ -48,7 +48,7 @@ Assuming you have an environment manager like [conda](https://docs.conda.io/proj
 ```bash
 conda create -n argopy-training python=3.11
 conda activate argopy-training
-mamba install -c conda-forge argopy gsw tqdm boto3 kerchunk numcodecs s3fs zarr dask distributed pyarrow ipython cartopy jupyterlab jupyterlab-git ipykernel ipywidgets matplotlib pyproj seaborn
+conda install -c conda-forge argopy gsw tqdm boto3 kerchunk numcodecs s3fs zarr dask distributed pyarrow ipython cartopy jupyterlab jupyterlab-git ipykernel ipywidgets matplotlib pyproj seaborn
 ```
 This command will create and install a complete `argopy-training` environment with the last available version of all dependencies.
 
