@@ -1,6 +1,6 @@
-| <img src="https://raw.githubusercontent.com/euroargodev/argopy/master/docs/_static/argopy_logo_long.png" alt="argopy logo" width="200"/><br>A python library dedicated to Argo data access, visualisation and manipulation for regular users as well as Argo experts and operators | 
-|:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
-|                                                                                                                         [![DOI][joss-badge]][joss-link]  [![Documentation][rtd-badge]][rtd-link]                                                                                                                          |
+| <img src="https://raw.githubusercontent.com/euroargodev/argopy/master/docs/_static/argopy_logo_long_training.png" alt="argopy logo" width="200"/><br> Training content | 
+|:----------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
+|                                                [![DOI][joss-badge]][joss-link]  [![Documentation][rtd-badge]][rtd-link]                                                |
 
 [joss-badge]: https://img.shields.io/badge/DOI-10.21105%2Fjoss.02425-brightgreen
 [joss-link]: https://dx.doi.org/10.21105/joss.02425
@@ -34,3 +34,9 @@ Select the thematic you are the most interested in, and raise your expertise by 
 |                                                                  | [Compute your own per-profile diagnostic](./argo-data-manipulation/compute-custom.ipynb)             |
 | 🗃️ [Argo index and meta-data](./argo-index-meta-data) | [Working with Argo index files](./argo-index-meta-data/working-with-argo-index.ipynb)                |
 |                                                                  | [Argo Reference tables lookup](./argo-index-meta-data/argo-reference-tables.ipynb)                   |
+
+### Additional content
+
+- [Argopy cheatsheet PDF (lastest)](https://argopy.readthedocs.io/en/v1.3.0/_static/argopy-cheatsheet.pdf)
+- [Argopy gallery of examples](https://argopy.readthedocs.io/en/v1.3.0/gallery.html)
+- Argopy general introduction PDF
