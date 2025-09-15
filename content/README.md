@@ -1,3 +1,11 @@
+| <img src="https://raw.githubusercontent.com/euroargodev/argopy/master/docs/_static/argopy_logo_long.png" alt="argopy logo" width="200"/><br>A python library dedicated to Argo data access, visualisation and manipulation for regular users as well as Argo experts and operators | 
+|:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
+|                                                                                                                         [![DOI][joss-badge]][joss-link]  [![Documentation][rtd-badge]][rtd-link]                                                                                                                          |
+
+[joss-badge]: https://img.shields.io/badge/DOI-10.21105%2Fjoss.02425-brightgreen
+[joss-link]: https://dx.doi.org/10.21105/joss.02425
+[rtd-badge]: https://img.shields.io/badge/Documentation-v1.3.0-brightgreen
+[rtd-link]: https://argopy.readthedocs.io/en/latest/?badge=latest
 
 ### Session 1: General introduction to Argopy
 

@@ -184,5 +184,5 @@ def process_all_notebooks(folder_in=".", folder_out="."):
 
 if __name__ == "__main__":
     nbinput = "../notebooks-with-soluce"
-    nboutput = "../notebooks"
+    nboutput = "../content"
     process_all_notebooks(nbinput, nboutput)

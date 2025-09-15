@@ -20,7 +20,7 @@
 
 This repository is dedicated to host the material required for Argopy training sessions.
 
-## Install and setup
+## 🛠️ Install and setup
 
 **You will need to set up your Python environment with the last Argopy version and all required dependencies.**
 
@@ -30,34 +30,11 @@ Since all the training material is provided as [Jupyter notebooks](https://jupyt
 
 To get you started though, succinct install and setup instructions are given in the "[how_to_install](./how_to_install)" folder of this repository.
 
-## Training Content
+## 📚 Training Content
 
 A typical Argopy training camp is organized in 2 sessions.
 
-### Session 1: General introduction to Argopy
+- a general introduction to Argopy,
+- practice with thematic notebooks.
 
-To start with, check this PDF with a general introduction to the Argopy library.
-
-Then move on to execute the following hands-on notebook:
-
-| Theme                             | Notebook                                                                       | 
-|-----------------------------------|--------------------------------------------------------------------------------|
-| 🚀 [Hands on](notebooks/hands-on) | [Examples of Argo features](./notebooks/hands-on/argopy-getting-started.ipynb) |
-
-### Session 2: Practice with thematic notebooks
-
-Select the thematic you are the most interested in, and raise your expertise by going through each notebook and exercice there-in.
-
-| Theme                                                            | Notebooks                                                                                                       |
-|------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------|
-| 📊 [Argo data fetching](./notebooks/argo-data-fetching)          | [Select and fetch data](./notebooks/argo-data-fetching/select-and-fetch-data.ipynb)                             |
-|                                                                  | [Source and user mode](./notebooks/argo-data-fetching/fetching-options.ipynb)                                   |
-|                                                                  | [BGC data specifics](./notebooks/argo-data-fetching/bgc-specifics.ipynb)                                        |
-|                                                                  | [Direct access to one float dataset](./notebooks/argo-data-fetching/direct-access-to-float-dataset.ipynb)       |
-|                                                                  | [How to handle large data selection](./notebooks/argo-data-fetching/large-data-selection.ipynb)                                           |
-| 🛠️ [Argo data manipulation](./notebooks/argo-data-manipulation) | Filtering (QC flags, data mode)                                                                                 |
-|                                                                  | [Vertical interpolation & binning](./notebooks/argo-data-manipulation/vertical-interpolation-and-binning.ipynb) |
-|                                                                  | [Compute (TEOS, Optic, CANYON-MED)](./notebooks/argo-data-manipulation/compute.ipynb)                           |
-|                                                                  | [Compute your own per-profile diagnostic](./notebooks/argo-data-manipulation/compute-custom.ipynb)              |
-| 🗃️ [Argo index and meta-data](./notebooks/argo-index-meta-data) | [Working with Argo index files](./notebooks/argo-index-meta-data/working-with-argo-index.ipynb)                 |
-|                                                                  | [Argo Reference tables lookup](./notebooks/argo-index-meta-data/argo-reference-tables.ipynb)                    |
+All the training content is available in the [content](./content) folder of this repository.
