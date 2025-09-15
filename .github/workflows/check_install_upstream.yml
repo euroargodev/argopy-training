@@ -67,4 +67,4 @@ jobs:
           python -c "import argopy; print(argopy.show_versions())"
           python -c "import argopy; assert argopy.DataFetcher().float(1901393).data.argo.N_POINTS == 25527"
           python -c "import argopy; assert argopy.DataFetcher(src='gdac', mode='expert').profile(5903248, 34).data.argo.N_POINTS == 70"
-          python -c "import argopy; assert argopy.DataFetcher(src='argovis').region([-20, -16., 0, 10, 0, 100.]).data.argo.N_LEVELS == 128"
+          python -c "import argopy; assert argopy.DataFetcher(src='argovis').region([-20, -16., 0, 10, 0, 100., '20250801','20250901']).data.argo.N_LEVELS == 172"

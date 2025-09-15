@@ -40,7 +40,7 @@ jobs:
 
       - name: Set environment variables
         run: |
-          echo "CONDA_ENV_FILE=how_to_install/argopy-training.yml" >> $GITHUB_ENV
+          echo "CONDA_ENV_FILE=get_ready/argopy-training.yml" >> $GITHUB_ENV
           echo "PYTHON_VERSION=${{ matrix.python-version }}" >> $GITHUB_ENV
           echo "LOG_FILE=Pinned-Py${{matrix.python-version}}-${{matrix.os}}.log" >> $GITHUB_ENV
 
