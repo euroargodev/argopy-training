@@ -21,7 +21,7 @@ Then we will move on to execute the following hands-on notebook:
 
 ## Session 2: Practice with thematic notebooks
 
-Select the thematic you are the most interested in, and raise your expertise by going through each notebook and exercice there-in.
+Select the theme you are the most interested in, and raise your expertise by going through each notebook and exercice there-in.
 
 | Theme                                                        | Notebooks                                                                                            |
 |--------------------------------------------------------------|------------------------------------------------------------------------------------------------------|
