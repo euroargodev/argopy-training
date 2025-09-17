@@ -40,5 +40,5 @@ Select the theme you are the most interested in, and raise your expertise by goi
 ## Additional content
 
 - [Argopy cheatsheet PDF (v1.3.0)](pdf/argopy-cheatsheet-v1.3.0.pdf)
-- [Argopy introduction slides PDF](pdf/20250922-EAScienceMeeting-argopy-training.pdf)
+- [Argopy introduction slides in PDF](pdf/20250922-EAScienceMeeting-argopy-training.pdf)
 - [Argopy gallery of examples](https://argopy.readthedocs.io/en/v1.3.0/gallery.html)
