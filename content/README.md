@@ -17,7 +17,7 @@ Then we will move on to execute the following hands-on notebook:
 
 | Theme               | Notebook                                                                       | 
 |---------------------|--------------------------------------------------------------------------------|
-| 🚀 Hands on | [Examples of Argo features](hands-on/argopy-getting-started.ipynb) |
+| 🚀 Hands on | [Examples of Argopy features](hands-on/argopy-getting-started.ipynb) |
 
 ## Session 2: Practice with thematic notebooks
 
