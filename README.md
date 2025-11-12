@@ -13,7 +13,7 @@ This repository is dedicated to host the material required for Argopy training s
 
 ## 🛠️ Get ready
 
-**You will need to set up your Python environment with Argopy version 1.3.0 and all required dependencies.**
+**You will need to set up your Python environment with [the last Argopy version](https://github.com/euroargodev/argopy/releases/latest) and all required dependencies.**
 
 > Note that Argopy training camps do not start with an installation tutorial. We expect from attendees a working Argopy environment to start the training.
 
