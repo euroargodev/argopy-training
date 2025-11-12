@@ -2,8 +2,8 @@
 
 [![DOI][joss-badge]][joss-link] [![Documentation][rtd-badge]][rtd-link]
 
-[rtd-badge]: https://img.shields.io/badge/Documentation-v1.3.0-brightgreen
-[rtd-link]: https://argopy.readthedocs.io/en/v1.3.0
+[rtd-badge]: https://img.shields.io/badge/Documentation-v1.3.1-brightgreen
+[rtd-link]: https://argopy.readthedocs.io/en/v1.3.1
 [joss-badge]: https://img.shields.io/badge/DOI-10.21105%2Fjoss.02425-brightgreen
 [joss-link]: https://dx.doi.org/10.21105/joss.02425
 
@@ -13,13 +13,13 @@ This repository is dedicated to host the material required for Argopy training s
 
 ## 🛠️ Get ready
 
+Installation and setup instructions are given in the [get_ready](./get_ready) folder of this repository.
+
 **You will need to set up your Python environment with [the last Argopy version](https://github.com/euroargodev/argopy/releases/latest) and all required dependencies.**
 
 > Note that Argopy training camps do not start with an installation tutorial. We expect from attendees a working Argopy environment to start the training.
 
 Since all the training material is provided as [Jupyter notebooks](https://jupyter.org/install), you will also need to set up **Jupyter** (we recommend JupyterLab) and install the Python kernel where you installed Argopy.
-
-To get you started though, installation and setup instructions are given in the [get_ready](./get_ready) folder of this repository.
 
 ## 📚 Training content
 
