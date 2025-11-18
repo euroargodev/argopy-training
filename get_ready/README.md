@@ -14,7 +14,7 @@
 > Note that training camps do not include an installation and setup session. 
 
 **List of requirements for participants**:
-- [ ] have a working argopy environment, [running version 1.3.1, or higher, of argopy](https://argopy.readthedocs.io/en/lastest/install.html)
+- [ ] have a working argopy environment, [running version 1.3.1, or higher, of argopy](https://argopy.readthedocs.io/en/latest/install.html)
 - [ ] have [Jupyterlab or Jupyter](https://jupyter.org/install) installed, since training is with notebooks
 - [ ] [clone](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository#cloning-a-repository) or [download](https://docs.github.com/en/repositories/working-with-files/using-files/downloading-source-code-archives#downloading-source-code-archives) this repository content in order to have training notebooks available to Jupyter for execution.
 
