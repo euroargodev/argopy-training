@@ -94,7 +94,7 @@ def fix_disclaimer(input_nb_path, output_nb_path):
                 "For more details, visit: [EUPL v1.2 Full Text](https://github.com/euroargodev/argopy-training/blob/main/LICENSE).\n",
                 "\n",
                 "#### 🤝 Sponsor\n",
-                "![logo](https://raw.githubusercontent.com/euroargodev/argopy-training/refs/heads/main/for_nb_producers/template_argopy_training_EAONE.png)",
+                "![logo](https://raw.githubusercontent.com/euroargodev/argopy-training/refs/heads/main/for_nb_producers/disclaimer_argopy_EAONE.png)",
                 "\n***\n",
             ]
             cell['metadata']['editable'] = False
@@ -250,6 +250,9 @@ def insert_header(input_nb_path, output_nb_path):
             for i, item in enumerate(cell['source']):
                 if 'https://argopy.readthedocs.io/en/v1.3.0' in item:
                     cell['source'][i] = item.replace('https://argopy.readthedocs.io/en/v1.3.0',
+                                                     f'https://argopy.readthedocs.io/en/{version}')
+                if 'https://argopy.readthedocs.io/en/latest' in item:
+                    cell['source'][i] = item.replace('https://argopy.readthedocs.io/en/latest',
                                                      f'https://argopy.readthedocs.io/en/{version}')
         cells.append(cell)
     notebook["cells"] = cells
