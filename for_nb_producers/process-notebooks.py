@@ -4,6 +4,7 @@ import shutil
 from pathlib import Path
 import logging
 from dataclasses import dataclass
+import re
 import argopy
 
 
@@ -59,6 +60,39 @@ def copy_notebook(input_nb_path, output_nb_path):
     shutil.copy2(input_nb_path, output_nb_path)
     return output_nb_path
 
+
+@dataclass(frozen=True)
+class Disclaimer:
+    html : str = """
+## 🏁 End of the notebook
+
+***
+#### 👀 Useful argopy commands
+```python
+argopy.reset_options()
+argopy.show_options()
+argopy.status()
+argopy.clear_cache()
+argopy.show_versions()
+```
+#### ⚖️ License Information
+This Jupyter Notebook is licensed under the **European Union Public Licence (EUPL) v1.2**.
+
+| Permissions      | Limitations     | Conditions                     |
+|------------------|-----------------|--------------------------------|
+| ✔ Commercial use | ❌ Liability     | ⓘ License and copyright notice |
+| ✔ Modification   | ❌ Trademark use | ⓘ Disclose source              |
+| ✔ Distribution   | ❌ Warranty      | ⓘ State changes                |
+| ✔ Patent use     |                  | ⓘ Network use is distribution  |
+| ✔ Private use    |                  | ⓘ Same license                 |
+
+For more details, visit: [EUPL v1.2 Full Text](https://github.com/euroargodev/argopy-training/blob/main/LICENSE).
+
+#### 🤝 Sponsor
+![logo](https://raw.githubusercontent.com/euroargodev/argopy-training/refs/heads/main/for_nb_producers/disclaimer_argopy_EAONE.png)
+***
+"""
+
 def fix_disclaimer(input_nb_path, output_nb_path):
     """Fill in disclaimer cell"""
     with open(input_nb_path, "r", encoding="utf-8") as f:
@@ -69,34 +103,7 @@ def fix_disclaimer(input_nb_path, output_nb_path):
     for cell in notebook["cells"]:
         if cell.get("metadata", {}).get("tags", []).count("disclaimer"):
             print("\tFound disclaimer to insert")
-            cell["source"] = [
-                "## 🏁 End of the notebook\n",
-                "\n***\n",
-                "#### 👀 Useful argopy commands\n",
-                "```python\n",
-                "argopy.reset_options()\n",
-                "argopy.show_options()\n",
-                "argopy.status()\n",
-                "argopy.clear_cache()\n",
-                "argopy.show_versions()\n",
-                "```\n",
-                "#### ⚖️ License Information\n",
-                "This Jupyter Notebook is licensed under the **European Union Public Licence (EUPL) v1.2**.\n",
-                "\n",
-                "| Permissions      | Limitations     | Conditions                     |\n",
-                "|------------------|-----------------|--------------------------------|\n",
-                "| ✔ Commercial use | ❌ Liability     | ⓘ License and copyright notice |\n",
-                "| ✔ Modification   | ❌ Trademark use | ⓘ Disclose source              |\n",
-                "| ✔ Distribution   | ❌ Warranty      | ⓘ State changes                |\n",
-                "| ✔ Patent use     |                  | ⓘ Network use is distribution  |\n",
-                "| ✔ Private use    |                  | ⓘ Same license                 |\n",
-                "\n",
-                "For more details, visit: [EUPL v1.2 Full Text](https://github.com/euroargodev/argopy-training/blob/main/LICENSE).\n",
-                "\n",
-                "#### 🤝 Sponsor\n",
-                "![logo](https://raw.githubusercontent.com/euroargodev/argopy-training/refs/heads/main/for_nb_producers/disclaimer_argopy_EAONE.png)",
-                "\n***\n",
-            ]
+            cell["source"] = [Disclaimer.html]
             cell['metadata']['editable'] = False
         cells.append(cell)
     notebook["cells"] = cells
@@ -266,7 +273,15 @@ def insert_header(input_nb_path, output_nb_path):
     return output_nb_path
 
 
-def fix_orth(input_nb_path, output_nb_path):
+def add_arrow_to_markdown_link(markdown_text):
+    # Regex to match markdown links and insert (↗)
+    pattern = r'\[([^\]]+)\]\(([^)]+)\)'
+    replacement = r'[\1 (↗)](\2)'
+    return re.sub(pattern, replacement, markdown_text)
+
+
+def fix_md(input_nb_path, output_nb_path):
+    """Correct for some typos, or links, etc ..."""
     with open(input_nb_path, "r", encoding="utf-8") as f:
         notebook = json.load(f)
 
@@ -274,8 +289,13 @@ def fix_orth(input_nb_path, output_nb_path):
     for cell in notebook["cells"]:
         if cell['cell_type'] == 'markdown':
             for i, line in enumerate(cell['source']):
+                # Orthograph:
                 cell['source'][i] = cell['source'][i].replace("EXERCICE", "EXERCISE")
                 cell['source'][i] = cell['source'][i].replace("exercice", "exercise")
+                # Markdown links:
+                # from: [text_url](url)
+                # to:   [text_url (↗)](url)
+                cell['source'][i] = add_arrow_to_markdown_link(cell['source'][i])
         cells.append(cell)
     notebook["cells"] = cells
 
@@ -297,26 +317,23 @@ def process_all_notebooks(folder_in=".", folder_out="."):
     for notebook_path in input_dir.rglob("*.ipynb"):
         # Get the relative path of the notebook from the input directory
         relative_path = notebook_path.relative_to(input_dir)
-        if ".ipynb_checkpoints" not in relative_path.parts:
+        if ".ipynb_checkpoints" not in relative_path.parts and "Untitled" not in relative_path.name:
 
             # Construct the corresponding output path
             output_path = output_dir / relative_path
 
             if "-soluce.ipynb" in notebook_path.name:
                 op = clean_notebook_soluce(notebook_path, output_path)
-                fix_orth(op, op)
                 print(f"Cleaning {notebook_path} -> {op}")
             else:
                 op = copy_notebook(notebook_path, output_path)
-                fix_orth(op, op)
                 print(f"Unchanged {notebook_path} -> {op}")
 
             fix_disclaimer(op, op)
+            fix_md(op, op)
             insert_toc(op, op)
             insert_header(op, op)
 
-        # else:
-        #     print(f"Skipping {notebook_path}")
 
 if __name__ == "__main__":
     nbinput = "../notebooks-with-soluce"
