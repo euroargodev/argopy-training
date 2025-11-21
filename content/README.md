@@ -23,19 +23,21 @@ Then we will move on to execute the following hands-on notebook:
 
 Select the theme you are the most interested in, and raise your expertise by going through each notebook and exercice there-in.
 
-| Theme                                                        | Notebooks                                                                                            |
-|--------------------------------------------------------------|------------------------------------------------------------------------------------------------------|
-| 📊 Argo data fetching        | [Select and fetch data](argo-data-fetching/select-and-fetch-data.ipynb)                            |
-|                                                              | [Source and user mode](argo-data-fetching/fetching-options.ipynb)                                  |
-|                                                              | [BGC data specifics](argo-data-fetching/bgc-specifics.ipynb)                                       |
-|                                                              | [Direct access to one float dataset](argo-data-fetching/direct-access-to-float-dataset.ipynb)      |
-|                                                              | [How to handle large data selection](argo-data-fetching/large-data-selection.ipynb)                                                                   |
-| 🛠️ Argo data manipulation | [Filtering (QC flags, data mode)](argo-data-manipulation/filtering-qc-mode.ipynb)                               |
-|                                                              | [Vertical interpolation & binning](argo-data-manipulation/vertical-interpolation-and-binning.ipynb) |
-|                                                              | [Compute (TEOS, Optic, CANYON-MED)](argo-data-manipulation/compute.ipynb)                          |
-|                                                              | [Compute your own per-profile diagnostic](argo-data-manipulation/compute-custom.ipynb)             |
-| 🗃️ Argo index and meta-data | [Working with Argo index files](argo-index-meta-data/working-with-argo-index.ipynb)                |
-|                                                              | [Argo Reference tables lookup](argo-index-meta-data/argo-reference-tables.ipynb)                   |
+| Theme                        | Notebooks                                                                                           |
+|------------------------------|-----------------------------------------------------------------------------------------------------|
+| 📊 Argo data fetching        | [Select and fetch data](argo-data-fetching/select-and-fetch-data.ipynb)                             |
+|                              | [Source and user mode](argo-data-fetching/fetching-options.ipynb)                                   |
+|                              | [BGC data specifics](argo-data-fetching/bgc-specifics.ipynb)                                        |
+|                              | [Direct access to one float dataset](argo-data-fetching/direct-access-to-float-dataset.ipynb)       |
+|                              | [How to handle large data selection](argo-data-fetching/large-data-selection.ipynb)                 |
+| 🛠️ Argo data manipulation   | [Filtering (QC flags, data mode)](argo-data-manipulation/filtering-qc-mode.ipynb)                   |
+|                              | [Vertical interpolation & binning](argo-data-manipulation/vertical-interpolation-and-binning.ipynb) |
+|                              | [Compute (TEOS, Optic,Nutrients/Carbonates)](argo-data-manipulation/compute.ipynb)                  |
+|                              | [Compute your own per-profile diagnostic](argo-data-manipulation/compute-custom.ipynb)              |
+| 🗃️ Argo index and meta-data | [Working with Argo index files](argo-index-meta-data/working-with-argo-index.ipynb)                 |
+|                              | [Argo Reference tables lookup](argo-index-meta-data/argo-reference-tables.ipynb)                    |
+| 🎯 Low-level tools           | [Generic GDAC file system](low-level-tools/GDAC-file-system.ipynb)                                  |
+|                              | [web-API requests](low-level-tools/web-API.ipynb)                                                   |
 
 ## Additional content
 
