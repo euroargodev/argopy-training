@@ -11,7 +11,7 @@
 
 ## Session 1: General introduction to Argopy
 
-A speaker will first take you through an introduction to the Argopy library ([slides in PDF here](pdf/20250922-EAScienceMeeting-argopy-training.pdf)).
+A speaker will first take you through an introduction to the Argopy library ([slides in PDF here](pdf/20251125-training-Brest.pdf)).
 
 Then we will move on to execute the following hands-on notebook:
 
@@ -41,6 +41,6 @@ Select the theme you are the most interested in, and raise your expertise by goi
 
 ## Additional content
 
-- [Argopy cheatsheet PDF (v1.3.0)](pdf/argopy-cheatsheet-v1.3.0.pdf)
-- [Argopy introduction slides in PDF](pdf/20250922-EAScienceMeeting-argopy-training.pdf)
-- [Argopy gallery of examples](https://argopy.readthedocs.io/en/v1.3.0/gallery.html)
+- [Argopy cheatsheet PDF (v1.3.1)](pdf/argopy-cheatsheet-v1.3.0.pdf)
+- [Argopy introduction slides in PDF](pdf/20251125-training-Brest.pdf)
+- [Argopy gallery of examples](https://argopy.readthedocs.io/en/v1.3.1/gallery.html)
