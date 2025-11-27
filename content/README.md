@@ -36,6 +36,8 @@ Select the theme you are the most interested in, and raise your expertise by goi
 |                              | [Compute your own per-profile diagnostic](argo-data-manipulation/compute-custom.ipynb)              |
 | 🗃️ Argo index and meta-data | [Working with Argo index files](argo-index-meta-data/working-with-argo-index.ipynb)                 |
 |                              | [Argo Reference tables lookup](argo-index-meta-data/argo-reference-tables.ipynb)                    |
+|                              | [Deployment plan](argo-index-meta-data/deployment-table.ipynb)                                      |
+| 🧐 Quality control           | [CTD data for core DMQC](reference-dabase-shipCTD.ipynb)                                            |
 | 🎯 Low-level tools           | [Generic GDAC file system](low-level-tools/GDAC-file-system.ipynb)                                  |
 |                              | [web-API requests](low-level-tools/web-API.ipynb)                                                   |
 
