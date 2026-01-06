@@ -14,7 +14,7 @@
 > Note that training camps do not include an installation and setup session. 
 
 **List of requirements for participants**:
-- [ ] have a working argopy environment, [running version 1.3.1, or higher, of argopy](https://argopy.readthedocs.io/en/latest/install.html)
+- [ ] have a working argopy environment, [running version 1.4.0, or higher, of argopy](https://argopy.readthedocs.io/en/latest/install.html)
 - [ ] have [Jupyterlab or Jupyter](https://jupyter.org/install) installed, since training is with notebooks
 - [ ] [clone](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository#cloning-a-repository) or [download](https://docs.github.com/en/repositories/working-with-files/using-files/downloading-source-code-archives#downloading-source-code-archives) this repository content in order to have training notebooks available to Jupyter for execution.
 
@@ -57,7 +57,7 @@ Assuming you have an environment manager like [conda](https://docs.conda.io/proj
 ```bash
 conda create -n argopy-training python=3.11
 conda activate argopy-training
-conda install -c conda-forge argopy=1.3.1 aiohttp=3.12.14 decorator=5.2.1 erddapy=2.2.4 fsspec=2025.5.1 h5netcdf=1.6.3 netCDF4=1.7.2 packaging=25.0 requests=2.32.4 scipy=1.16.0 toolz=1.0.0 xarray=2025.7.1 gsw=3.6.19 pyco2sys=1.8.3 tqdm=4.67.1 boto3=1.38.27 jsonschema=4.25.1 kerchunk=0.2.8 numcodecs=0.16.1 s3fs=2025.5.1 zarr=3.0.10 dask=2025.5.1 distributed=2025.5.1 joblib=1.5.2 numba=0.62.1 pyarrow=20.0.0 coiled=1.120.0 IPython=9.4.0 cartopy=0.24.0 matplotlib=3.10.3 pyproj=3.7.1 seaborn=0.13.2 jupyterlab=4.4.7 ipykernel=6.29.5 ipywidgets=8.1.7 aiofiles=24.1.0 black=25.1.0 bottleneck=1.5.0 cfgrib=0.9.15.0 cftime=1.6.4 codespell=2.4.1 flake8=7.3.0 numpy=2.3.1 pandas=2.3.1 pip=25.1.1 pytest=8.4.1 setuptools=80.9.0 -y
+conda install -c conda-forge argopy=1.4.0 aiohttp=3.12.14 decorator=5.2.1 erddapy=2.2.4 fsspec=2025.5.1 h5netcdf=1.6.3 netCDF4=1.7.2 packaging=25.0 requests=2.32.4 scipy=1.16.0 toolz=1.0.0 xarray=2025.7.1 gsw=3.6.19 pyco2sys=1.8.3 tqdm=4.67.1 boto3=1.38.27 jsonschema=4.25.1 kerchunk=0.2.8 numcodecs=0.16.1 s3fs=2025.5.1 zarr=3.0.10 dask=2025.5.1 distributed=2025.5.1 joblib=1.5.2 numba=0.62.1 pyarrow=20.0.0 coiled=1.120.0 IPython=9.4.0 cartopy=0.24.0 matplotlib=3.10.3 pyproj=3.7.1 seaborn=0.13.2 jupyterlab=4.4.7 ipykernel=6.29.5 ipywidgets=8.1.7 aiofiles=24.1.0 black=25.1.0 bottleneck=1.5.0 cfgrib=0.9.15.0 cftime=1.6.4 codespell=2.4.1 flake8=7.3.0 numpy=2.3.1 pandas=2.3.1 pip=25.1.1 pytest=8.4.1 setuptools=80.9.0 -y
 ```
 This command will create and install a complete `argopy-training` environment with the last available version of all dependencies.
 

@@ -4,8 +4,8 @@
 
 [joss-badge]: https://img.shields.io/badge/DOI-10.21105%2Fjoss.02425-brightgreen
 [joss-link]: https://dx.doi.org/10.21105/joss.02425
-[rtd-badge]: https://img.shields.io/badge/Documentation-v1.3.1-brightgreen
-[rtd-link]: https://argopy.readthedocs.io/en/v1.3.1
+[rtd-badge]: https://img.shields.io/badge/Documentation-v1.4.0-brightgreen
+[rtd-link]: https://argopy.readthedocs.io/en/v1.4.0
 
 # Training content
 
@@ -43,6 +43,6 @@ Select the theme you are the most interested in, and raise your expertise by goi
 
 ## Additional content
 
-- [Argopy cheatsheet PDF (v1.3.1)](pdf/argopy-cheatsheet-v1.3.0.pdf)
+- [Argopy cheatsheet PDF (v1.4.0)](pdf/argopy-cheatsheet-v1.4.0.pdf)
 - [Argopy introduction slides in PDF](pdf/20251125-training-Brest.pdf)
-- [Argopy gallery of examples](https://argopy.readthedocs.io/en/v1.3.1/gallery.html)
+- [Argopy gallery of examples](https://argopy.readthedocs.io/en/v1.4.0/gallery.html)
