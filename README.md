@@ -11,6 +11,11 @@
 
 This repository is dedicated to host the material required for Argopy training sessions.
 
+If you can't wait, just click the [MyBinder](https://euroargodev.github.io/binder-links-creator/) button below to open a jupyter notebook ready to play with Argopy tutorials:
+
+[![Binder](https://img.shields.io/static/v1.svg?logo=Jupyter&label=Argopy&message=Start%20online%20tutorial%20notebooks&color=blue)](https://2i2c.mybinder.org/v2/gh/euroargodev/binder-sandbox/main?urlpath=git-pull%3Frepo%3Dhttps%253A%252F%252Fgithub.com%252Feuroargodev%252Fargopy-training%26urlpath%3Dlab%252Ftree%252Fargopy-training%252Fcontent%26branch%3Dmain)
+
+
 ## 🛠️ Get ready
 
 Installation and setup instructions are given in the [get_ready](./get_ready) folder of this repository.
