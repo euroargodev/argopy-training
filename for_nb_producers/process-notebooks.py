@@ -8,7 +8,7 @@ import re
 import argopy
 
 
-log = logging.getLogger("hook.nbsoluce")
+log = logging.getLogger("nbsoluce")
 
 firstcellcodeline = lambda c: (
     c.get("source", [])[0] if len(c.get("source", [])) > 0 else ""
